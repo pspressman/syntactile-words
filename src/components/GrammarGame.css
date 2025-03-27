@@ -1,0 +1,138 @@
+/* src/GrammarGame.css */
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.game-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mode-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.mode-button {
+  padding: 15px;
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-button:hover {
+  border-color: #999;
+  background-color: #f9f9f9;
+}
+
+.mode-button.selected {
+  background-color: #e0e0ff;
+  border-color: #4040ff;
+}
+
+.image-container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.prompt-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.word-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin: 20px auto;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.sentence-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.game-score {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.tries-counter {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.feedback {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.feedback.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.feedback.success {
+  color: #388e3c;
+  background-color: #e8f5e9;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .sentence-slots,
+  .word-tiles {
+    padding: 10px;
+  }
+  
+  .prompt-image {
+    max-height: 300px;
+  }
+}
