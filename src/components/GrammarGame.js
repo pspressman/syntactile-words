@@ -131,7 +131,7 @@ function GrammarGame() {
             "Passive Voice": "passive",
             "Imperfect Tense": "imperfect",
             "Object Cleft": "object_cleft",
-            "Wh Questions": "wh_questions"
+            "Wh Questions": "wh_question"
         };
         
         const modeFolder = modeFolderMap[mode] || mode.toLowerCase();
