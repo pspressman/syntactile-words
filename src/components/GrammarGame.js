@@ -122,8 +122,10 @@ function GrammarGame() {
         
         // Get the correct tile order for this sentence
         const correctOrder = getCorrectOrder(mode, pictureId);
-        setCorrectOrderForCurrentSentence(correctOrder);
-        
+        console.log('Setting up trial for:', pictureId);
+        console.log('Expected order:', correctOrder);
+        setCorrectOrderForCurrentSentence(correctOrder);   
+
         // Map folders to modes
         const modeFolderMap = {
             "Passive Voice": "passive",
@@ -239,9 +241,9 @@ function GrammarGame() {
         // stored during setupNewTrial
         
         // Extract tileIds from the slots
-        const currentOrderIds = currentSlots.map(slot => 
-            slot.wordTile ? slot.wordTile.tileId : null
-        );
+        const currentOrderIds = currentSlots.map(slot => slot.wordTile ? slot.wordTile.tileId : null);
+        console.log('User arrangement:', currentOrderIds);
+        console.log('Expected arrangement:', correctOrderForCurrentSentence);
         
         // Compare with the correct order for this sentence
         let isCorrect = true;
@@ -437,6 +439,11 @@ function GrammarGame() {
                             {feedback}
                         </div>
                     )}
+                    <div style={{margin: '20px', padding: '10px', border: '2px solid red', background: '#ffe0e0'}}>
+                        <h3>Debug Info:</h3>
+                        <p>Expected Order: {JSON.stringify(correctOrderForCurrentSentence)}</p>
+                        <p>Current Picture: {availableSentences.length > 0 ? availableSentences[0].Picture : 'None'}</p>
+                    </div>
                 </>
             )}
         </div>
