@@ -439,11 +439,6 @@ function GrammarGame() {
                             {feedback}
                         </div>
                     )}
-                    <div style={{margin: '20px', padding: '10px', border: '2px solid red', background: '#ffe0e0'}}>
-                        <h3>Debug Info:</h3>
-                        <p>Expected Order: {JSON.stringify(correctOrderForCurrentSentence)}</p>
-                        <p>Current Picture: {availableSentences.length > 0 ? availableSentences[0].Picture : 'None'}</p>
-                    </div>
                 </>
             )}
         </div>
