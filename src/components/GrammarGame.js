@@ -96,8 +96,8 @@ function GrammarGame() {
                     [`${prefix}4`, `${prefix}1`, `${prefix}5`, `${prefix}3`, `${prefix}2`];
             case MODES.WH_QUESTION:
                 return version2 ?
-                    [`${prefix}5`, `${prefix}4`, `${prefix}2`, `${prefix}3`, `${prefix}1`, `${prefix}6`] :
-                    [`${prefix}5`, `${prefix}4`, `${prefix}1`, `${prefix}3`, `${prefix}2`, `${prefix}6`];
+                    [`${prefix}5`, `${prefix}4`, `${prefix}2`, `${prefix}3`, `${prefix}6`] :
+                    [`${prefix}5`, `${prefix}4`, `${prefix}1`, `${prefix}3`, `${prefix}6`];
             default:
                 return [];
         }
